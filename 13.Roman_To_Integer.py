@@ -47,5 +47,8 @@ class Solution(object):
                 sum += d[s[i+1]] - d[s[i]]
                 i += 2
             else:
-                sum += d    
+                sum += d[s[i]]
+                i += 1
+
+            return sum
                 
