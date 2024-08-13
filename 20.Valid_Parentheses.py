@@ -16,7 +16,10 @@
 #   Input: s = "(]"
 #   Output: false
 
-# Solution
+
+
+# -------Solution------->
+
 # hashmap = {')':'(','{':'}','[':']'}
 # stk = []
 # for c in s:
