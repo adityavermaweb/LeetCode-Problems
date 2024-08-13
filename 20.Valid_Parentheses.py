@@ -4,7 +4,29 @@
 # 2. Open brackets must be closed in the correct order.
 # 3. Every close bracket has a corresponding open breacket of the same type.
 
-# Example : 1
+# Example:1
 #   Input: s = "()"
 #   Output: true
 
+# Example:2
+#   Input: s = "() [] {}"
+#   Output: true
+
+# Example:3
+#   Input: s = "(]"
+#   Output: false
+
+# Solution
+# hashmap = {')':'(','{':'}','[':']'}
+# stk = []
+# for c in s:
+#   if c not in hashmap:
+#       stk.append(c)
+#   else:
+#       if not stk:
+#           return False
+#       else:
+#           popped = stk.pop()
+#           if popped != hashmap[c]:
+#               return False
+#   return not stk
