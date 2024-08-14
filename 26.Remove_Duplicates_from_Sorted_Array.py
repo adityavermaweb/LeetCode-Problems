@@ -21,3 +21,14 @@
 
 
 
+# ----------Solution------------>
+
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        r = 1
+
+        for i in range(1, len(nums)): #Start iterating from the second element (i = 1) to the end of the list.
+            if nums[i-1] != nums[i]: #Compare the current element with the previous one 
+                nums[r] = nums[i]
+                r += 1
+        return r     
